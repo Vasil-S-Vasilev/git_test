@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<!-- profile details section -->
+<section id="recipe-details">
+  <h1>Profile Details</h1>
+  <div class="info-section">
+    <div class="recipe-header">
+      <!-- default profile image -->
+      <!-- if the user is not a chef - a default image - no_chef_img.png -->
+      <!-- if the user is a chef - a default image - chef_img.png -->
+
+      <img class="recipe-img" src="/static/images/chef_img.png" alt="profile-image" />
+
+      <!-- profile full name -->
+      <h1>Fname Lname</h1>
+
+      <!-- profile nickname -->
+      <p class="description">Nickname: testuser</p>
+
+      <!-- profile bio -->
+      <!-- if no profile bio - display 'N/A' -->
+
+      <p class="description">Bio: N/A</p>
+
+      <!-- total number of published recipes -->
+      <p class="description">Published recipes: 3</p>
+
+      <!-- Edit/Delete buttons -->
+      <div class="buttons">
+        <a href="#" class="edit-button">Edit</a>
+        <a href="#" class="delete-button">Delete</a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
