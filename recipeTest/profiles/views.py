@@ -22,7 +22,7 @@ class DetailsProfileView(DetailView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-
+        
         # Only published posts by this author
         profile = self.get_object()
         recipes = profile.recipes.all()
