@@ -9,3 +9,9 @@ class ProfileBaseForm(forms.ModelForm):
 
 class ProfileCreateForm(ProfileBaseForm):
     pass
+
+
+class ProfileEditForm(ProfileBaseForm):
+    class Meta:
+        model = Profile
+        fields = ['nickname', 'first_name', 'last_name', 'bio', 'chef']

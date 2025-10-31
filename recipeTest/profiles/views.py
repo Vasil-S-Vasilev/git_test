@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.views.generic import CreateView, DetailView, UpdateView, DeleteView
 from profiles.models import Profile
 from django.urls import reverse_lazy
-from profiles.forms import ProfileCreateForm
+from profiles.forms import ProfileCreateForm, ProfileEditForm
 from recipeTest.utils import get_user_object
 # Create your views here.
 
@@ -29,4 +29,11 @@ class DetailsProfileView(DetailView):
         context['recipes_count'] = recipes.count()
         return context
 
+class ProfileEditView(UpdateView):
+    model = Profile
+    form_class = ProfileEditForm
+    template_name = 'profiles/edit-profile.html'
+    success_url = reverse_lazy('details-profile')
 
+    def get_object(self, queryset=None):
+        return get_user_object()
