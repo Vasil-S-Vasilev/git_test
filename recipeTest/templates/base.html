@@ -23,7 +23,7 @@
                 <!-- if the user has created a profile -->
                 {% else %}
                 <a href="#">Catalogue</a>
-                <a href="#">Create Recipe</a>
+                <a href="{% url 'create-recipe' %}">Create Recipe</a>
                 <a href="{% url 'details-profile' %}">Profile</a>
                 {% endif %}
             </nav>

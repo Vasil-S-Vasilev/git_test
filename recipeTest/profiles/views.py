@@ -37,3 +37,12 @@ class ProfileEditView(UpdateView):
 
     def get_object(self, queryset=None):
         return get_user_object()
+
+
+class ProfileDeleteView(DeleteView):
+    model = Profile
+    template_name = 'profiles/delete-profile.html'
+    success_url = reverse_lazy('home-page')
+
+    def get_object(self, queryset=None):
+        return get_user_object()
