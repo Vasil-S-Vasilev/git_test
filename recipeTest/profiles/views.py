@@ -10,7 +10,7 @@ class CreateProfileView(CreateView):
     model = Profile
     form_class = ProfileCreateForm
     template_name = 'profiles/create-profile.html'
-    success_url = reverse_lazy('home-page') # to cataloque-page
+    success_url = reverse_lazy('cataloque-page') # to cataloque-page
 
 
 class DetailsProfileView(DetailView):

@@ -1,6 +1,6 @@
 from django import forms
 from recipes.models import Recipe
-from recipeTest.mixins import PlaceholderMixin
+from recipeTest.mixins import PlaceholderMixin, ReadOnlyMixin
 
 
 class RecipeBaseForm(forms.ModelForm):
@@ -28,3 +28,12 @@ class RecipeCreateFrom(PlaceholderMixin, RecipeBaseForm):
         # Set help text and password masking
         self.fields['ingredients'].help_text = "Ingredients must be separated by a comma and space." 
         self.fields['cooking_time'].help_text = "Provide the cooking time in minutes."
+
+class RecipeEditForm(PlaceholderMixin, RecipeBaseForm):
+    pass
+
+
+class RecipeDeleteForm(ReadOnlyMixin, RecipeBaseForm):
+    read_only_fields = ['title', 'cuisine_type', 'ingredients', 'instructions', 'cooking_time', 'image_url']
+
+
