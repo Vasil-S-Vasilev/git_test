@@ -60,6 +60,7 @@ class RecipeEditView(UpdateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['profile'] = get_user_object()
+        print(type(context['form'].fields))  # test
         return context
 
 
