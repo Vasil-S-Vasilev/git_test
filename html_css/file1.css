@@ -1,0 +1,26 @@
+.text{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly; /* keeps 3 divs in one row */
+    align-content: flex-end;
+    row-gap: 10px;   /* ✅ controls distance between rows */
+
+    /* align-items: flex-end;          ✅ pushes them to the bottom */
+    color: blue;
+    padding: 30px;
+    border: 1px solid blue;
+    height: 300px;                  /* ✅ makes the container taller */
+    width: 800px;
+    background-color: lightblue;
+
+}
+
+.text div{
+    width: 25%;
+    border: 1px solid red;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: white;
+    color: red;
+    text-align: center;
+}
