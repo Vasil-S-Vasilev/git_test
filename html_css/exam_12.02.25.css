@@ -34,7 +34,7 @@ body {
     width: 100%;
     max-width: 1280px;
 
-    border: 2px solid black;
+    /* border: 2px solid black; */
 }
 
 aside {
@@ -53,12 +53,13 @@ h2 {
     text-transform: uppercase;
     letter-spacing: 0.25em;
     color: #585858;
+    
 }
 
 form {
     padding-top: 2em;
 
-    /*border: 2px solid blue;*/
+    /* border: 2px solid blue; */
 }
 
 input, textarea {
@@ -70,7 +71,7 @@ input, textarea {
     border-bottom: 1px solid #E9E9E9;
     margin-bottom: 2em;
 
-    /*border: 1px solid orange;*/
+    /* border: 1px solid orange; */
 }
 
 button {
@@ -85,16 +86,20 @@ button {
     font-weight: bold;
     margin-bottom: 4em;
 
-    /*border: 1px solid red;*/
+    /* border: 1px solid red; */
 }
 
 .flex-row {
     display: flex;
     gap: 1.5em;
+
+    /* border: 1px solid red; */
 }
 
 a, p {
     color: #585858;
+
+    /* border: 1px solid red; */
 }
 
 .socials {
@@ -103,7 +108,7 @@ a, p {
     flex-wrap: wrap;
     padding-top: 2em;
 
-    /*border: 1px solid red;*/
+    /* border: 1px solid red; */
 }
 
 
@@ -112,7 +117,7 @@ a, p {
     line-height: 1;
     border-radius: 0.1em;
 
-    /*border: 1px solid blue;*/
+    /* border: 1px solid blue; */
 }
 
 
@@ -121,5 +126,5 @@ a, p {
     padding: 0.5em 1em;
     font-size: 1.4em;
 
-    /*border: 1px solid yellow;*/
+    /* border: 1px solid yellow; */
 }
