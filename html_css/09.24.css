@@ -19,29 +19,35 @@ body {
     justify-content: center;
     padding: 2em;
 
-    /* border: 1px solid red; */
+    border: 5px solid black;
 }
 
 .postcard-container {
     background: white;
-    width: 850px;
+    width: 915px;
     border-radius: 12px;
     overflow: hidden;
     padding: 2em;
     box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+
+    border: 2px solid red;
 }
 
 .image-section {
     position: relative;
+
+    border: 3px solid green;
 }
 
 .image-section img {
-    width: 100%;
     display: block;
+    width: 100%;
 }
 
 img {
     border-radius: 12px;
+
+    border: 2px solid rgb(255, 0, 238);
 }
 
 .message-box {
@@ -49,13 +55,15 @@ img {
     bottom: 25px;
     left: 50%;
     transform: translateX(-50%);
-    width: 80%;
+    width: 90%;
     background: rgba(255, 255, 255, 0.9);
     padding: 20px 25px;
     border-radius: 12px;
     text-align: center;
     font-size: 15px;
     line-height: 1.5;
+
+    border: 2px solid blue;
 }
 
 .message-box h2 {
@@ -66,6 +74,8 @@ margin-bottom: 10px;
 padding: 35px 50px;
 font-size: 18px;
 line-height: 1.8;
+
+border: 2px solid orange;
 }
 
 .address-section strong {

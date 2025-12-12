@@ -34,7 +34,7 @@ body {
     width: 100%;
     max-width: 1280px;
 
-    /* border: 2px solid black; */
+    /* border: 2px solid red; */
 }
 
 aside {
@@ -59,7 +59,7 @@ h2 {
 form {
     padding-top: 2em;
 
-    /* border: 2px solid blue; */
+    /* border: 2px solid rgb(255, 0, 221); */
 }
 
 input, textarea {
@@ -93,7 +93,7 @@ button {
     display: flex;
     gap: 1.5em;
 
-    /* border: 1px solid red; */
+    /* border: 1px solid black; */
 }
 
 a, p {
@@ -126,5 +126,5 @@ a, p {
     padding: 0.5em 1em;
     font-size: 1.4em;
 
-    /* border: 1px solid yellow; */
+    /* border: 1px solid green; */
 }
