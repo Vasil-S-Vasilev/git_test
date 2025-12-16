@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap");
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css');
+
+
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html {
+    font: 12px/1.5 'IBM Plex Mono', monospace;
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body, input, button, textarea {
+    font: inherit;
+}
+
+body {
+    background-color: #F5F5F5;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2em;
+
+    border: 2px solid orange;
+}
+
+.container {
+    background: #080808;
+    color: white;
+    width: 825px;
+    height: 463px;
+    /* padding: 55px; */
+    border-radius: 1em;
+    text-align: center;
+
+    /* border: 2px solid red; */
+}
+
+/* Navigation Bar */
+.navbar {
+    background: #1B1B1B;
+    padding: 1.2em;
+    border-radius: 8px;
+    margin: 0 3em;
+
+    /* border: 2px solid green; */
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+   
+
+    /* border: 2px solid green; */
+}
+
+.navbar ul li {
+    display: block;
+    flex: 1;
+    text-align: center;
+    
+    /* border: 2px solid yellow; */
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #81847B;
+    font-weight: 500;
+}
+
+
+/* Profile Section */
+.profile-section {
+    display: flex;
+    /* border: 2px solid yellow; */
+    margin-top: 4em;
+    gap: 2em;
+}
+
+.profile-section .text {
+    display: block;
+    flex: 1 1 auto;
+    text-align: left;
+    max-width: 50%;
+    padding-left: 4em;
+    padding-top: 3em;
+
+    /* border: 2px solid red; */
+}
+
+.profile-section .profile-image {
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: center;
+    align-items: center;
+
+    /* border: 2px solid blue; */
+}
+
+.profile-image img {
+    display: block;
+    max-width: 70%;
+    margin: 0;
+    border-radius: 50%;
+
+    /* border: 2px solid orange; */
+}
+
+
+.profile-section h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.profile-section p {
+    font-size: 10px;
+    margin-top: 10px;
+    color: #bbb;
+}
+
+.profile-section button {
+    margin-top: 15px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+/* Worked With Section */
+.work-section {
+    margin-top: 20px;
+
+
+}
+
+.work-section p {
+    font-size: 12px;
+    margin-bottom: 10px;
+    text-align: left;
+    padding: 0 5em;
+
+    /* border: 2px solid green; */
+}
+
+.brands {
+    display: flex;
+    gap: 2em;
+    padding: 0 6em;
+
+    /* border: 2px solid red; */
+}
+
+.brand {
+    flex: 1 1 auto;
+    background: #111;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    font-size: 14px;
+    color: #888;
+}
+
+
+

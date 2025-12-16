@@ -1,0 +1,75 @@
+
+@media (max-width: 600px) {
+    body {
+        border-top: 20px solid red;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    .checkbtn {
+        display: block;
+        order: 1;
+
+        border: 2px solid green;
+    }
+
+    .site-header > i, h1 {
+        text-align: initial;
+        position: static;
+        bottom: initial;
+
+        border: 2px solid blue;
+    }
+
+    section.site-header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        border: 2px solid yellow;
+    }
+
+
+
+    section.about {
+        display: flex;
+        gap: 1em;
+
+        border: 3px solid orange;
+    }
+
+    section.about .about-header,
+    section.about .about-text {
+        flex: 1 1 50%;
+    }
+
+
+    section.about .about-header {
+        text-align: left;
+        width: auto;
+        position: static;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        border: 1px solid black;
+    }
+
+    section.about .about-text {
+        display: block;
+        width: auto;
+        margin: 0;
+
+        border: 2px solid red;
+    }
+
+    .gallery {
+        text-align: center;
+    }
+
+
+}

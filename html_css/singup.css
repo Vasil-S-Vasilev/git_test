@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font: 14px/1.5 "Kode Mono", sans-serif;
+    background-color: white;
+}
+
+body, input, button, textarea {
+    font: inherit;
+}
+
+body {
+    padding: 2em;
+    border: 2px solid black;
+    background-color: #C1BDBA;
+    margin: 2em;
+}
+
+form {
+    max-width: 750px;
+    margin: 0 auto;
+    background: #24333C;
+    color: white;
+    padding: 4em;
+    border-radius: 0.4em;
+    box-shadow: 0 0 1em 0 rgb(0,0,0,0.2);
+    font-size: 1.6em;
+
+    border: 2px solid red;
+}
+
+.nav {
+    display: flex;
+    margin-bottom: 2em;
+
+    /* border: 2px solid blue; */
+}
+
+.nav li {
+    flex: 1 1 auto;
+    display: block;
+    list-style: none;
+
+    /* border: 2px solid red; */
+}
+
+.nav a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    padding: 1em 2em;
+    text-align: center;
+    background: #364247;
+    
+    /* border: 2px solid yellow; */
+}
+
+.nav li:nth-of-type(2) a {
+    color: #859898;
+}
+
+.nav a:hover {
+    background: #179A77;
+}
+
+.nav li:nth-of-type(2) a:hover {
+    color: white;
+}
+
+.nav li.current a {
+    background: #1AB188;
+}
+
+form h2 {
+    text-align: center;
+    font-weight: normal;
+    padding-bottom: 1.2em;
+    font-size: 1.7em;
+
+    /* border: 2px solid red; */
+}
+
+.flex {
+    display: flex;
+    gap: 2em;
+}
+
+.flex .field {
+    flex: 1 1 auto;
+}
+
+
+.field {
+    position: relative;
+    padding-bottom: 2em;
+
+    /* border: 2px solid blue; */
+}
+
+.field input {
+    display: block;
+    width: 100%;
+    border: 1px solid #90A3A2;
+    background-color: transparent;
+    padding: 0.3em 0.5em;
+    line-height: 1;
+    outline: none;
+
+    /* border: 2px solid green;   */
+}
+
+.field label {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0.3em 0.5em;
+    color: #90979D;
+    width: 100%;
+    
+    /* border: 2px solid red */
+}
+
+input ~ label::after {
+    display: inline-block;
+    content: "*";
+    color: #1AB188;
+    padding-left: 0.2em;
+
+    /* border: 2px solid orange; */
+}
+
+button {
+    display: block;
+    width: 100%;
+    background: #1AB188;
+    color: white;
+    padding: 0.5em;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    border: none;
+}
+

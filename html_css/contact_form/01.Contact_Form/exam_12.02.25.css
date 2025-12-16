@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font: 12px/1.5 'Source Sans 3', sans-serif;
+}
+
+body, input, button, textarea {
+    font: inherit;
+}
+
+body {
+    background-color: #F6F6F6;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2em;
+
+    border: 2px solid black;
+}
+
+.container {
+    display: flex;
+    gap: 2em;
+    width: 100%;
+    max-width: 1280px;
+
+    /* border: 2px solid red; */
+}
+
+aside {
+    flex: 0 0 260px;
+
+    /* border: 2px solid orange; */
+}
+
+main {
+    flex: 1 1 auto;
+
+    /* border: 2px solid green; */
+}
+
+h2 {
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    color: #585858;
+    
+}
+
+form {
+    padding-top: 2em;
+
+    /* border: 2px solid rgb(255, 0, 221); */
+}
+
+input, textarea {
+    display: block;
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    padding: 0.5em 0em;
+    border-bottom: 1px solid #E9E9E9;
+    margin-bottom: 2em;
+
+    /* border: 1px solid orange; */
+}
+
+button {
+    display: inline-block;
+    border: none;
+    border-radius:0.2em;
+    background: #585858;
+    color: white;
+    padding: 1em 2em;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-weight: bold;
+    margin-bottom: 4em;
+
+    /* border: 1px solid red; */
+}
+
+.flex-row {
+    display: flex;
+    gap: 1.5em;
+
+    /* border: 1px solid black; */
+}
+
+a, p {
+    color: #585858;
+
+    /* border: 1px solid red; */
+}
+
+.socials {
+    display: flex;
+    gap: 0.4em;
+    flex-wrap: wrap;
+    padding-top: 2em;
+
+    /* border: 1px solid red; */
+}
+
+
+.socials li {
+    display: block;
+    line-height: 1;
+    border-radius: 0.1em;
+
+    /* border: 1px solid blue; */
+}
+
+
+.socials li a {
+    display: block;
+    padding: 0.5em 1em;
+    font-size: 1.4em;
+
+    /* border: 1px solid green; */
+}
