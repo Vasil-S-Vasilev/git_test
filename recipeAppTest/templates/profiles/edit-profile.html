@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<!-- edit profile form -->
+<section id="register-page" class="content auth">
+  <form id="register" method="post">
+    <div class="container">
+      <h1>Edit Profile</h1>
+      {% csrf_token %}
+      
+      <div>
+        <label for="{{ form.nickname.id_for_label }}">Nickname:</label>
+        {{ form.nickname }}
+      </div>
+
+      <div>
+        <label for="{{ form.first_name.id_for_label }}">First Name:</label>
+        {{ form.first_name }}
+      </div>
+
+      <div>
+        <label for="{{ form.last_name.id_for_label }}">Last Name:</label>
+        {{ form.last_name }}
+      </div>
+
+      <!-- ✅ Render Chef checkbox manually -->
+      <div>
+        <label for="{{ form.chef.id_for_label }}">Chef:</label>
+        {{ form.chef }}
+      </div>
+
+
+      <div>
+        <label for="{{ form.bio.id_for_label }}">Bio:</label>
+        {{ form.bio }}
+      </div>
+
+      <!-- edit button -->
+      <input class="btn" type="submit" value="Edit Profile" />
+    </div>
+  </form>
+</section>
+{% endblock %}
