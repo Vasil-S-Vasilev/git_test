@@ -7,7 +7,7 @@ class RecipeBaseForm(forms.ModelForm):
         model = Recipe
         exclude = ('author',)
 
-class RecipeCreateFrom(PlaceholderMixin, RecipeBaseForm):
+class RecipeCreateForm(PlaceholderMixin, RecipeBaseForm):
     custom_placeholders = {
         'ingredients': 'ingredient1, ingredient2, ...',
         'instructions': 'Enter detailed instructions here...',

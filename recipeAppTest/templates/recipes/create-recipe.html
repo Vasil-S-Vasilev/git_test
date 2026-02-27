@@ -3,12 +3,43 @@
 
 <!-- create recipe form -->
 <section id="create-page" class="auth">
-  <form id="create" method="">
+  <form id="create" method="post">
     <div class="container">
       <h1 class="form-create-headline">Create Recipe</h1>
       {% csrf_token %}
-      {{ form }}
+
+      <div>
+        {{ form.title.label_tag }}
+        {{ form.title }}
+      </div>
+
+      <div>
+        {{ form.cuisine_type.label_tag }}
+        {{ form.cuisine_type }}
+      </div>
+
+      <div>
+        {{ form.ingredients.label_tag }}
+        <div class="helptext">{{ form.ingredients.help_text }}</div>
+        {{ form.ingredients }}
+      </div> 
       
+      <div>
+        {{ form.instructions.label_tag }}
+        {{ form.instructions }}
+      </div>
+
+      <div>
+        {{ form.cooking_time.label_tag }}
+        <div class="helptext">{{ form.cooking_time.help_text }}</div>
+        {{ form.cooking_time }}
+      </div>
+      
+      <div>
+        {{ form.image_url.label_tag }}
+        {{ form.image_url }}
+      </div>
+
       <!-- create button -->
       <input class="btn" type="submit" value="Create Recipe" />
     </div>
