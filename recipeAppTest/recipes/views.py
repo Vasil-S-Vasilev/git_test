@@ -12,7 +12,7 @@ class RecipeCreateView(CreateView):
     model = Recipe
     form_class = RecipeCreateForm
     template_name = 'recipes/create-recipe.html'
-    success_url = reverse_lazy('home-page')  # cataloque-page
+    success_url = reverse_lazy('catalogue-page')
 
     def form_valid(self, form):
         form.instance.author = get_user_object()
