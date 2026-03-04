@@ -21,6 +21,9 @@ class RecipeCreateView(CreateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['profile'] = get_user_object()
+        # form = self.get_form()
+        # print(form.fields)  # test
+        # print(context['form'])  # test
         return context
 
 class CataloqueView(ListView):
