@@ -3,6 +3,12 @@
 
 <section id="index-headline">
   <div class="index-message">
+    {% if user.is_authenticated %}
+      <h2>Hello {{ user.username }}</h2>
+    {% else %}
+      <h2>Hello Anonymous</h2>
+    {% endif %}  
+    <br>
     <h2>Explore, Create, and Share</h2>
     <h3>Culinary Delights</h3>
     <h4>with TastyRecipes App!</h4>

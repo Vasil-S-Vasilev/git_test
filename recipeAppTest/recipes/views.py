@@ -4,11 +4,12 @@ from recipes.models import Recipe
 from django.urls import reverse_lazy
 from recipes.forms import RecipeCreateForm, RecipeEditForm, RecipeDeleteForm
 from recipeAppTest.utils import get_user_object
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 
 # Create your views here.
 
-class RecipeCreateView(CreateView):
+class RecipeCreateView(LoginRequiredMixin, CreateView):
     model = Recipe
     form_class = RecipeCreateForm
     template_name = 'recipes/create-recipe.html'
