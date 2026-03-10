@@ -41,8 +41,17 @@ class Recipe(models.Model):
         null=True
     )
 
+    approved = models.BooleanField(
+        default=False,
+    )
+
     author = models.ForeignKey(
         to='profiles.Profile',
         on_delete=models.CASCADE,
         related_name='recipes'
     )
+
+    class Meta:
+        permissions = [
+            ('can_approve_recipes', 'Can approve recipes'),
+        ]

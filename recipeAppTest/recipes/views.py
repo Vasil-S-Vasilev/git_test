@@ -32,9 +32,16 @@ class CataloqueView(ListView):
     template_name = 'recipes/catalogue.html'
     context_object_name = 'recipes'
 
+    # new added
+    def get_queryset(self):
+        if self.request.user.has_perm('recipes.can_approve_recipes'):
+            return Recipe.objects.all()
+        return Recipe.objects.filter(approved=True)
+
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['profile'] = get_user_object()
+        # context['can_approve'] = self.request.user.has_perm('recipes.can_approve_recipes')  
         return context
 
 class RecipeDetailsView(DetailView):
@@ -59,6 +66,14 @@ class RecipeEditView(UpdateView):
     context_object_name = 'recipe'
     pk_url_kwarg = 'recipe_id'
     success_url = reverse_lazy('catalogue-page')
+
+    def get_form(self, form_class=None):
+        form = super().get_form(form_class)
+
+        if not self.request.user.has_perm('recipes.can_approve_recipes'):
+            form.fields.pop('approved', None)
+
+        return form
 
     def get_context_data(self, **kwargs):
         context =  super().get_context_data(**kwargs)
