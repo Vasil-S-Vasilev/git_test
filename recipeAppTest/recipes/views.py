@@ -74,6 +74,15 @@ class RecipeEditView(UpdateView):
             form.fields.pop('approved', None)
 
         return form
+        
+
+    def form_valid(self, form):
+        if not self.request.user.has_perm('recipes.can_approve_recipes'):
+            form.instance.approved = False
+
+        return super().form_valid(form)
+
+
 
     def get_context_data(self, **kwargs):
         context =  super().get_context_data(**kwargs)

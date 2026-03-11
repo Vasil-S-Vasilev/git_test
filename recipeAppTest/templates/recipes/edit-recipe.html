@@ -39,6 +39,14 @@
         {{ form.image_url.label_tag }}
         {{ form.image_url }}
       </div>
+
+      {% if form.approved %}
+      <div>
+        {{ form.approved.label_tag }}
+        {{ form.approved }}
+      </div>
+      {% endif %}
+
       <!-- edit button -->
       <input class="btn submit" type="submit" value="Edit Recipe" />
     </div>
