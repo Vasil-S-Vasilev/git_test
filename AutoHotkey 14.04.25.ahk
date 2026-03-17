@@ -2378,6 +2378,7 @@ return
 ::qq22::& "C:\Users\user\Desktop\work_folder\venv\Scripts\Activate.ps1"
 
 ::qq23::{{}`% `%{}}
+::qq24::python -c "import sys; print(sys.executable)"
 
 
 ;Shift LWin-> LWin + d
