@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views.generic import CreateView
 
-from recipeAppTest.forms import CustomUserForm
+from accounts.forms import CustomUserForm
 
 # Create your views here.
 class UserRegisterView(CreateView):
