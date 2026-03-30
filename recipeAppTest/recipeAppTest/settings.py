@@ -52,6 +52,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'recipeAppTest.middlewares.measure_time_execution',
+    'recipeAppTest.middlewares.MeasureTimeExecution',
 ]
 
 ROOT_URLCONF = 'recipeAppTest.urls'
