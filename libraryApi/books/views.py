@@ -8,6 +8,7 @@ from rest_framework import status
 from rest_framework.views import APIView
 from rest_framework.generics import ListAPIView
 from django.shortcuts import get_object_or_404
+from drf_spectacular.utils import extend_schema
 
 
 @api_view(['GET' ,'POST'])
@@ -55,6 +56,10 @@ class ListBooksApiView(ListAPIView):
     serializer_class = BookSerializer
 
 
+@extend_schema(
+    request=BookSerializer,
+    responses={201: BookSerializer, 400: BookSerializer},
+)
 class BookViewSet(APIView):
     
     @staticmethod
