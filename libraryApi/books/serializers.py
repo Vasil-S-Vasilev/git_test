@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from books.models import Book, Author
+from books.models import Book, Author, Publisher
 
 class AuthorSerializer(serializers.ModelSerializer):
     class Meta:
@@ -29,12 +29,23 @@ class BookSerializer(serializers.ModelSerializer):
         new_object_authors = [Author(name=a_name) for a_name in new_authors_names]
   
         created_object_authors = Author.objects.bulk_create(new_object_authors)
-        
         all_object_authors = list(existing_object_authors) + list(created_object_authors)
 
         book.author.set(all_object_authors)
 
         return book
+
+class PublisherSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Publisher
+        fields = '__all__'
+
+
+class PublisherHyperlinkSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = Publisher
+        fields = '__all__'
+
 
 
 
