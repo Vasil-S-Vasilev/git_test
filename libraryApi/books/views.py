@@ -30,6 +30,10 @@ def list_books_view(request):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
+@extend_schema(
+    request=BookSerializer,
+    responses={201: BookSerializer, 400: BookSerializer},
+)
 class ListBookView(APIView):  # APIView is the base class, same as View in CBV
 
     def get(self, request):
