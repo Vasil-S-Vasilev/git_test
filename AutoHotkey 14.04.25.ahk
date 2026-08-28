@@ -133,8 +133,16 @@ return
 ::zz33::vasilev85
 return
 
-::zz34::Това е наличното:
+::zz34::
+    Send, Здравейте,{Enter}
+    Send, {Enter}
+    Send, В момента само това е наличното:{Enter}
+    Send, {Enter}
+    Send, Поздрави,{Enter}
+    Send, Васил Василев
+    Send, {Enter}
 return
+
 
 ::zz35::
     Send, Здравейте,{Enter}
@@ -2387,7 +2395,7 @@ return
 
 ::qq23::{{}`% `%{}}
 ::qq24::python -c "import sys; print(sys.executable)"
-
+::qq25::python regex/main/text_source.py
 
 ;Shift LWin-> LWin + d
 Shift & LWin::
